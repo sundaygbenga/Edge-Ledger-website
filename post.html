@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+			integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="css/utilities.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Post One</title>
+	</head>
+	<body id="home">
+		<header class="hero blog">
+			<div id="navbar" class="navbar top">
+				<h1 class="logo">
+					<span class="text-primary"
+						><i class="fas fa-book-open"></i>Edge</span
+					>Ledger
+				</h1>
+
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="index.httml#about">About</a></li>
+						<li><a href="index.httml#cases">Cases</a></li>
+						<li><a href="index.httml#blog">Blog</a></li>
+						<li><a href="index.httml#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<div class="content">
+				<h1>Blog</h1>
+			</div>
+		</header>
+
+		<main>
+            <section class="post">
+                <h2>Blog Post One</h2>
+                <p class="meta">
+                    <i class="fas fa-user"></i>Posted by <strong> John Doe</strong>| August 15 2022
+                </p>
+                <img src="./images/blog/blog1.jpg" alt="">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Quibusdam libero quisquam
+                    facere repellat, nisi, eveniet quos perferendis
+                    exercitationem illo alias, recusandae officia!
+                    Eveniet, aliquid. Maxime expedita minus ab
+                    reiciendis! Ratione.
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptate fuga neque sunt similique voluptatibus exercitationem nesciunt enim, ex, sint recusandae ea at eos esse. Laboriosam earum minima mollitia veritatis! Nobis laborum eaque veritatis voluptatem porro ipsa vero at distinctio omnis, pariatur mollitia autem iste incidunt provident adipisci inventore nihil recusandae explicabo, dicta hic, nam totam culpa. Sit, in architecto?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque incidunt voluptas qui, aspernatur laborum minima rerum aperiam vitae porro, quisquam dolor deserunt ut. Debitis, consectetur in! Voluptas cumque sunt doloremque mollitia quae, at iste suscipit enim consectetur fuga tempora quasi sed deserunt illo, amet, vel quaerat nisi dolorum incidunt repudiandae.</p>
+            </section>
+        </main>
+			
+
+       <footer class="footer bg-dark">
+        <div class="social">
+            <a href=""><i class="fab fa-facebook fa-2x"></i></a>
+            <a href=""><i class="fab fa-twitter fa-2x"></i></a>
+            <a href=""><i class="fab fa-youtube fa-2x"></i></a>
+            <a href=""><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+        <p>Copyright &copy; 2022- EdgeLedger</p>
+       </footer>
+
+       	<!-- Script for navbar  transparent, transform and bounce effect -->
+		<script>
+			const navbar = document.getElementById("navbar");
+			let scrolled = false;
+
+			window.onscroll = function () {
+				if (window.pageYOffset > 100) {
+					navbar.classList.remove("top");
+					if (!scrolled) {
+						navbar.style.transform = "translateY(-70px)";
+					}
+					//The transition is going up -70px and disappearing.Now if we want to wait a short time like 200ms and bring it back down by setting translateY back to ) with a function called setTimeout
+					setTimeout(function () {
+						navbar.style.transform = "translateY(0)";
+					}, 200);
+				} else {
+					navbar.classList.add("top");
+					scrolled = false;
+				}
+			};
+		</script>
+	</body>
+</html>
